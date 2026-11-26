@@ -14,11 +14,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.webmvc.test.autoconfigure.AutoConfigureMockMvc;
 import org.springframework.mock.web.MockHttpSession;
 import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.jdbc.datasource.init.ScriptUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 import java.net.InetSocketAddress;
 import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
+import javax.sql.DataSource;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -49,6 +53,9 @@ class ItJpInterviewServerApplicationTests {
 
     @Autowired
     private ObjectMapper objectMapper;
+
+    @Autowired
+    private DataSource dataSource;
 
     @BeforeEach
     void clearData() {
@@ -113,6 +120,30 @@ class ItJpInterviewServerApplicationTests {
                                 {"japanese":"要件定義"}
                                 """))
                 .andExpect(status().isForbidden());
+    }
+
+    @Test
+    void sessionRetainsCsrfTokenAcrossPageRequests() throws Exception {
+        MvcResult firstRequest = mockMvc.perform(get("/api/session"))
+                .andExpect(status().isOk())
+                .andReturn();
+
+        MockHttpSession session = (MockHttpSession) firstRequest.getRequest().getSession(false);
+        String csrfToken = objectMapper.readTree(firstRequest.getResponse().getContentAsString())
+                .path("csrfToken").asString();
+        assertTrue(session != null);
+        mockMvc.perform(get("/api/session").session(session))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.csrfToken").value(csrfToken));
+    }
+
+    @Test
+    void sessionSchemaCanBeInitializedRepeatedly() throws Exception {
+        try (Connection connection = dataSource.getConnection()) {
+            ClassPathResource schema = new ClassPathResource("session-schema-mysql.sql");
+            ScriptUtils.executeSqlScript(connection, schema);
+            ScriptUtils.executeSqlScript(connection, schema);
+        }
     }
 
     @Test
