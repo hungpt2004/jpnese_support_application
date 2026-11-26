@@ -1,0 +1,3866 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px
+}
+
+:root {
+    font-family: "Be Vietnam Pro", "Yu Gothic", "Meiryo", sans-serif;
+    color: #26283a;
+    background: #f6f7fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    --ink: #282a3d;
+    --muted: #888b9c;
+    --purple: #6159b6;
+    --purple-dark: #4c449d;
+    --line: #e9e9f0;
+    --paper: #fff;
+    --pale: #f0effa
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    min-width: 320px
+}
+
+.app-shell {
+    min-height: 100vh
+}
+
+.sidebar {
+    width: 244px;
+    position: fixed;
+    inset: 0 auto 0 0;
+    background: #fff;
+    border-right: 1px solid #eeeff4;
+    padding: 28px 17px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 3
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0 10px 38px
+}
+
+.brand-mark {
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+    background: #6159b6;
+    color: white;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 23px
+}
+
+.brand strong, .brand small {
+    display: block
+}
+
+.brand strong {
+    font: 800 21px Manrope, sans-serif;
+    letter-spacing: -1px
+}
+
+.brand small {
+    font-size: 8px;
+    letter-spacing: 1.55px;
+    color: #9191a1;
+    margin-top: 1px
+}
+
+.side-label, .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.55px;
+    font-weight: 700;
+    color: #9999a8
+}
+
+.side-label {
+    padding: 0 12px 12px
+}
+
+.main-nav {
+    display: grid;
+    gap: 5px
+}
+
+.nav-link {
+    height: 43px;
+    border: 0;
+    background: transparent;
+    color: #77798d;
+    text-align: left;
+    padding: 0 12px;
+    border-radius: 9px;
+    font: 500 12px "Be Vietnam Pro", sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.nav-link span {
+    font-size: 17px;
+    width: 19px;
+    color: #898b9d
+}
+
+.nav-link.active {
+    background: #f0effa;
+    color: #51499f;
+    font-weight: 700
+}
+
+.nav-link.active span {
+    color: #6159b6
+}
+
+.nav-count {
+    margin-left: auto;
+    background: #fff;
+    padding: 3px 7px;
+    border-radius: 10px;
+    font-size: 10px;
+    color: #6159b6
+}
+
+.sidebar-spacer {
+    flex: 1
+}
+
+.side-promo {
+    background: #f8f7fd;
+    border: 1px solid #f0eff7;
+    border-radius: 11px;
+    padding: 15px 13px;
+    margin: 0 2px 16px
+}
+
+.promo-icon {
+    color: #756dc6;
+    font-size: 16px
+}
+
+.side-promo strong {
+    display: block;
+    font-size: 11px;
+    margin: 8px 0 5px
+}
+
+.side-promo p {
+    font-size: 10px;
+    color: #888a9b;
+    line-height: 1.6;
+    margin: 0 0 11px
+}
+
+.streak {
+    border-top: 1px solid #eae9f1;
+    padding-top: 10px;
+    color: #74758a;
+    font-size: 9px
+}
+
+.streak span {
+    color: #e4a654;
+    margin-right: 5px
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-top: 1px solid #f0f0f4;
+    background: #fff;
+    padding: 15px 7px 2px;
+    text-align: left;
+    cursor: pointer
+}
+
+.avatar {
+    height: 31px;
+    width: 31px;
+    border-radius: 50%;
+    background: #eeeafa;
+    color: #6159b6;
+    display: grid;
+    place-items: center;
+    font-weight: 700
+}
+
+.profile-copy {
+    display: grid;
+    gap: 3px
+}
+
+.profile-copy strong {
+    font-size: 10px
+}
+
+.profile-copy small {
+    color: #a1a1ae;
+    font-size: 9px
+}
+
+.profile-menu {
+    margin-left: auto;
+    color: #888;
+    font-size: 16px
+}
+
+.main-content {
+    margin-left: 244px;
+    padding: 0 5.2%;
+    max-width: 1640px
+}
+
+.topbar {
+    height: 67px;
+    border-bottom: 1px solid #e9eaf0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.breadcrumb {
+    font-size: 10px;
+    color: #9294a3
+}
+
+.crumb-sep {
+    margin: 0 9px;
+    color: #c9c9d1
+}
+
+.breadcrumb strong {
+    color: #55576b;
+    font-weight: 600
+}
+
+.topbar-actions {
+    display: flex;
+    gap: 17px;
+    align-items: center
+}
+
+.today-label {
+    color: #9899a8;
+    font-size: 10px
+}
+
+.button {
+    border: 0;
+    border-radius: 7px;
+    min-height: 38px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font: 600 11px "Be Vietnam Pro", sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform .18s, background .18s
+}
+
+.button:hover {
+    transform: translateY(-1px)
+}
+
+.button-primary {
+    color: #fff;
+    background: #6159b6;
+    box-shadow: 0 5px 13px #6159b626
+}
+
+.button-primary:hover {
+    background: #4f48a2
+}
+
+.button-outline {
+    background: #fff;
+    border: 1px solid #e4e4ed;
+    color: #5f5e73
+}
+
+.button-light {
+    color: #51499f;
+    background: #fff
+}
+
+.button-small {
+    min-height: 32px;
+    padding: 0 12px;
+    font-size: 10px
+}
+
+.button-full {
+    width: 100%
+}
+
+.view {
+    display: none;
+    padding: 35px 0 55px
+}
+
+.view.active {
+    display: block;
+    animation: view-enter 0.3s ease both;
+}
+
+.button,
+.nav-link,
+.tab-button,
+.filter-chip,
+.quiz-option,
+.flashcard {
+    transition: color .18s ease, background-color .18s ease, border-color .18s ease,
+        box-shadow .22s ease, transform .22s ease, opacity .22s ease
+}
+
+.button:not(:disabled):hover,
+.quiz-option:not(:disabled):hover {
+    transform: translateY(-1px)
+}
+
+.vocab-item:nth-child(-n+5) {
+    animation: item-enter .32s ease both
+}
+
+.vocab-item:nth-child(2) {
+    animation-delay: .035s
+}
+
+.vocab-item:nth-child(3) {
+    animation-delay: .07s
+}
+
+.vocab-item:nth-child(4) {
+    animation-delay: .105s
+}
+
+.vocab-item:nth-child(5) {
+    animation-delay: .14s
+}
+
+@keyframes item-enter {
+    from {
+        opacity: 0;
+        transform: translateY(7px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes view-enter {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.welcome-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 113px
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.eyebrow-line {
+    width: 18px;
+    height: 1px;
+    background: #9b94d2
+}
+
+.welcome-row h1, .page-heading h1 {
+    font: 700 29px Manrope, "Be Vietnam Pro", sans-serif;
+    letter-spacing: -1px;
+    margin: 0;
+    color: #292b3e
+}
+
+.welcome-row h1 .wave {
+    font-size: 17px;
+    color: #c39b69;
+    vertical-align: middle
+}
+
+.lead {
+    font-size: 11px;
+    color: #9394a2;
+    margin: 9px 0 0
+}
+
+.welcome-decoration {
+    position: relative;
+    height: 90px;
+    width: 125px;
+    color: #d9d7ed;
+    font-family: "Yu Mincho", serif
+}
+
+.welcome-decoration span {
+    position: absolute;
+    font-size: 43px;
+    right: 50px;
+    top: -3px
+}
+
+.welcome-decoration i {
+    position: absolute;
+    font-size: 36px;
+    font-style: normal;
+    right: 7px;
+    top: 15px
+}
+
+.welcome-decoration b {
+    position: absolute;
+    font-size: 25px;
+    right: 69px;
+    top: 45px;
+    font-weight: 400
+}
+
+.welcome-decoration em {
+    position: absolute;
+    right: 11px;
+    top: 54px;
+    color: #b9b4e2;
+    font-size: 18px
+}
+
+.hero-banner {
+    min-height: 251px;
+    border-radius: 13px;
+    background: #494682;
+    overflow: hidden;
+    position: relative;
+    margin: 20px 0 34px;
+    color: #fff;
+    display: flex
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
+    padding: 29px 35px;
+    width: 48%
+}
+
+.hero-kicker {
+    font-size: 8px;
+    letter-spacing: 1.7px;
+    color: #ccc9ee;
+    font-weight: 700
+}
+
+.hero-copy h2 {
+    font: 700 25px/1.26 Manrope, sans-serif;
+    letter-spacing: -.7px;
+    margin: 13px 0 9px
+}
+
+.hero-copy p {
+    font-size: 10px;
+    line-height: 1.65;
+    color: #d6d5e7;
+    max-width: 310px;
+    margin: 0 0 17px
+}
+
+.hero-copy .button {
+    min-height: 34px;
+    font-size: 9px
+}
+
+.hero-art {
+    position: absolute;
+    inset: 0 0 0 43%;
+    overflow: hidden;
+    background: linear-gradient(112deg, #494682 0%, #7372aa 48%, #b4b1ce 100%)
+}
+
+.sun {
+    width: 93px;
+    height: 93px;
+    position: absolute;
+    right: 25%;
+    top: 23px;
+    background: #e8c996;
+    border-radius: 50%;
+    opacity: .94
+}
+
+.mountain {
+    position: absolute;
+    bottom: -38px;
+    right: -20px;
+    width: 70%;
+    height: 160px;
+    background: #817faf;
+    clip-path: polygon(0 100%, 45% 5%, 100% 100%);
+    opacity: .75
+}
+
+.mountain-front {
+    right: 25%;
+    width: 80%;
+    height: 132px;
+    background: #a6a4c8;
+    clip-path: polygon(0 100%, 48% 0, 100% 100%);
+    opacity: .74
+}
+
+.art-card {
+    position: absolute;
+    right: 15%;
+    bottom: 32px;
+    width: 176px;
+    height: 93px;
+    background: #fffdf6;
+    border-radius: 5px;
+    box-shadow: 0 9px 25px #25264b38;
+    transform: rotate(-4deg);
+    display: grid;
+    align-content: center;
+    padding: 15px 19px;
+    color: #45445f
+}
+
+.art-card span {
+    font-size: 8px;
+    color: #89879b;
+    letter-spacing: 1px
+}
+
+.art-card strong {
+    font: 700 17px "Yu Mincho", serif;
+    margin: 5px 0
+}
+
+.art-card small {
+    font-size: 7px;
+    color: #9c99a4
+}
+
+.art-sparkle {
+    position: absolute;
+    color: #f5e0bb
+}
+
+.sparkle-one {
+    right: 11%;
+    top: 43px;
+    font-size: 21px
+}
+
+.sparkle-two {
+    right: 48%;
+    top: 70px;
+    font-size: 12px
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 15px
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 5px
+}
+
+.section-heading h2 {
+    font: 700 16px Manrope, sans-serif;
+    margin: 0;
+    letter-spacing: -.35px
+}
+
+.section-note {
+    font-size: 9px;
+    color: #a1a2ae
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 14px
+}
+
+.feature-card {
+    padding: 16px 18px 14px;
+    border: 1px solid #ebebf1;
+    border-radius: 10px;
+    background: #fff;
+    min-height: 182px
+}
+
+.feature-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.feature-icon {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    background: #f1effb;
+    color: #645bb3;
+    font: 17px "Yu Mincho", serif
+}
+
+.interview-feature .feature-icon {
+    background: #fbf1e8;
+    color: #bc8754
+}
+
+.feature-arrow {
+    color: #aaaab5;
+    font-size: 14px
+}
+
+.feature-label {
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: #a0a0ad;
+    margin: 12px 0 4px
+}
+
+.feature-card h3 {
+    margin: 0;
+    font: 700 13px Manrope, sans-serif
+}
+
+.feature-description {
+    color: #9192a0;
+    font-size: 9px;
+    line-height: 1.55;
+    margin: 6px 0 12px;
+    max-width: 390px
+}
+
+.feature-bottom {
+    border-top: 1px solid #f0f0f4;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #9a9ba8;
+    font-size: 8px
+}
+
+.feature-bottom strong {
+    color: #646579;
+    font-size: 10px;
+    margin-right: 3px
+}
+
+.text-button {
+    background: none;
+    border: 0;
+    color: #5d55ae;
+    font-weight: 700;
+    font-size: 9px;
+    cursor: pointer
+}
+
+.text-button span {
+    font-size: 13px;
+    margin-left: 4px
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 14px;
+    margin-top: 14px
+}
+
+.panel {
+    border: 1px solid #ebebf1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px 18px
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.panel-heading .eyebrow {
+    margin-bottom: 5px
+}
+
+.panel-heading h3 {
+    margin: 0;
+    font: 700 13px Manrope, sans-serif
+}
+
+.panel-emoji {
+    color: #bab5e2;
+    font-size: 17px
+}
+
+.study-panel > p {
+    font-size: 9px;
+    color: #9293a1;
+    line-height: 1.6;
+    margin: 8px 0 12px
+}
+
+.study-panel .button {
+    font-size: 9px;
+    min-height: 31px
+}
+
+.dictionary-mark {
+    font: 23px "Yu Mincho", serif;
+    color: #c2bedf
+}
+
+.inline-search {
+    display: flex;
+    margin-top: 13px;
+    border: 1px solid #ededf1;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 34px
+}
+
+.inline-search input {
+    border: 0;
+    background: transparent;
+    padding: 0 10px;
+    outline: none;
+    flex: 1;
+    min-width: 0;
+    font: 10px "Be Vietnam Pro", sans-serif
+}
+
+.inline-search button {
+    border: 0;
+    background: #f1effa;
+    color: #6159b6;
+    width: 36px;
+    font-size: 18px;
+    cursor: pointer
+}
+
+.dictionary-result {
+    min-height: 18px;
+    margin-top: 7px;
+    font-size: 9px;
+    color: #9091a0;
+    line-height: 1.5
+}
+
+.dictionary-entry {
+    display: grid;
+    gap: 6px;
+    color: #777888;
+    overflow-wrap: anywhere
+}
+
+.dictionary-entry b {
+    color: #626376
+}
+
+.dictionary-word-result {
+    color: #494582;
+    font: 600 14px "Yu Gothic", "Meiryo", sans-serif
+}
+
+.dictionary-entry ul {
+    margin: 3px 0 0;
+    padding-left: 17px
+}
+
+.dictionary-example {
+    border-left: 2px solid #c8c3e6;
+    padding-left: 8px
+}
+
+.dictionary-entry a {
+    color: #5d55ae;
+    text-decoration: none
+}
+
+.dictionary-entry a:hover {
+    text-decoration: underline
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0 26px
+}
+
+.page-heading .eyebrow {
+    margin-bottom: 9px
+}
+
+.page-heading .button {
+    margin-top: 20px
+}
+
+.heading-accent {
+    font: 400 18px "Yu Mincho", serif;
+    color: #b0abd2;
+    letter-spacing: 0;
+    margin-left: 5px
+}
+
+.vocabulary-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e9e9f0
+}
+
+.vocab-tool-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.set-name-input {
+    width: 155px;
+    height: 30px;
+    border: 1px solid #e4e4ed;
+    border-radius: 6px;
+    padding: 0 8px;
+    color: #5f5e73;
+    font: 9px "Be Vietnam Pro", sans-serif;
+    outline: none
+}
+
+.set-name-input:focus,
+.deck-filter:focus {
+    border-color: #aaa4d8;
+    box-shadow: 0 0 0 2px #f0effa
+}
+
+.deck-filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 11px 0 7px
+}
+
+.deck-filter-row label {
+    color: #8d8e9c;
+    font-size: 9px
+}
+
+.deck-filter {
+    min-width: 150px;
+    height: 28px;
+    border: 1px solid #e8e8ef;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 7px;
+    color: #5f5e73;
+    font: 9px "Be Vietnam Pro", sans-serif;
+    outline: none
+}
+
+.tab-switch {
+    display: flex;
+    gap: 19px
+}
+
+.tab-button {
+    background: none;
+    border: 0;
+    color: #9798a6;
+    padding: 11px 1px 12px;
+    font: 500 10px "Be Vietnam Pro", sans-serif;
+    cursor: pointer;
+    border-bottom: 2px solid transparent
+}
+
+.tab-button.active {
+    color: #5750a4;
+    border-bottom-color: #6159b6;
+    font-weight: 700
+}
+
+.tab-button span {
+    background: #f1eff9;
+    padding: 2px 6px;
+    border-radius: 9px;
+    font-size: 8px;
+    margin-left: 4px
+}
+
+.upload-button {
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 9px;
+    margin-bottom: 7px
+}
+
+.upload-button input {
+    display: none
+}
+
+.import-hint {
+    font-size: 9px;
+    color: #9899a5;
+    margin: 12px 0 15px
+}
+
+.import-hint code {
+    background: #eeedf7;
+    color: #625ba9;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 9px
+}
+
+.import-ai {
+    margin-left: 7px;
+    color: #6159b6;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.import-ai input {
+    accent-color: #6159b6;
+    vertical-align: middle
+}
+
+.vocab-layout {
+    display: grid;
+    grid-template-columns:minmax(0, 1.55fr) minmax(240px, .85fr);
+    gap: 15px
+}
+
+.vocab-list-panel {
+    min-height: 320px
+}
+
+.vocab-list {
+    display: grid;
+    gap: 8px
+}
+
+.vocab-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    border: 1px solid #ececf2;
+    border-radius: 9px;
+    padding: 12px 13px
+}
+
+.word-kanji {
+    width: 39px;
+    height: 39px;
+    display: grid;
+    place-items: center;
+    background: #f4f2fb;
+    border-radius: 8px;
+    color: #5c55a6;
+    font: 18px "Yu Mincho", serif;
+    flex-shrink: 0
+}
+
+.word-copy {
+    min-width: 0;
+    flex: 1
+}
+
+.word-copy strong {
+    font: 600 13px "Yu Gothic", "Meiryo", sans-serif
+}
+
+.word-reading {
+    font-size: 9px;
+    color: #9999a7;
+    margin-left: 6px
+}
+
+.word-set {
+    color: #7771b4;
+    font-size: 8px;
+    margin-top: 4px
+}
+
+.word-meaning {
+    font-size: 9px;
+    color: #686a7c;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.word-example {
+    font-size: 9px;
+    color: #a1a1ae;
+    margin-top: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.word-actions {
+    display: flex;
+    gap: 4px
+}
+
+.word-actions button {
+    height: 27px;
+    width: 27px;
+    border: 0;
+    background: #f7f6fb;
+    border-radius: 6px;
+    color: #77758d;
+    cursor: pointer
+}
+
+.word-actions button.delete-word {
+    color: #b17d7d
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px 15px;
+    background: #fff;
+    border: 1px dashed #dedeea;
+    border-radius: 10px
+}
+
+.empty-state > span {
+    display: inline-grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #f1effa;
+    color: #685fb4;
+    font: 22px "Yu Mincho", serif
+}
+
+.empty-state h3 {
+    font-size: 13px;
+    margin: 11px 0 5px
+}
+
+.empty-state p {
+    font-size: 9px;
+    color: #9798a5;
+    margin: 0 0 13px
+}
+
+.empty-state .button {
+    font-size: 9px
+}
+
+.vocab-side {
+    display: grid;
+    gap: 13px;
+    align-content: start
+}
+
+.add-panel {
+    padding: 15px
+}
+
+.add-panel .panel-heading {
+    margin-bottom: 13px
+}
+
+.stack-form {
+    display: grid;
+    gap: 10px
+}
+
+.stack-form label {
+    display: grid;
+    gap: 5px;
+    color: #656679;
+    font-size: 9px;
+    font-weight: 600
+}
+
+.stack-form label span {
+    color: #bb7777
+}
+
+.stack-form input {
+    height: 33px;
+    width: 100%;
+    border: 1px solid #eaeaf0;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 9px;
+    outline: 0;
+    font: 10px "Be Vietnam Pro", sans-serif;
+    color: #393b4e
+}
+
+.stack-form input:focus {
+    border-color: #aaa4d8;
+    box-shadow: 0 0 0 2px #f0effa
+}
+
+.stack-form .button {
+    min-height: 34px;
+    margin-top: 2px;
+    font-size: 9px
+}
+
+.ai-card {
+    padding: 16px 15px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #55509d, #393762);
+    color: #fff
+}
+
+.ai-card-top {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #d1cee9;
+    font-size: 8px;
+    letter-spacing: 1px
+}
+
+.ai-card-top span:first-child {
+    color: #efc98e;
+    font-size: 13px
+}
+
+.ai-card h3 {
+    font: 700 16px/1.4 Manrope, sans-serif;
+    margin: 11px 0 5px
+}
+
+.ai-card > p {
+    font-size: 9px;
+    line-height: 1.6;
+    color: #d1d0e0;
+    margin: 0 0 12px
+}
+
+.ai-card .button {
+    font-size: 9px;
+    min-height: 33px
+}
+
+.ai-result {
+    max-height: 330px;
+    overflow: auto;
+    background: transparent;
+    border-radius: 6px;
+    margin-top: 12px;
+    font-size: 9px;
+    line-height: 1.6
+}
+
+.ai-analysis-item {
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #ffffff24;
+    border-radius: 6px;
+    background: #ffffff12
+}
+
+.ai-analysis-item h4 {
+    margin: 0 0 7px;
+    color: #fff;
+    font: 600 12px "Yu Gothic", "Meiryo", sans-serif
+}
+
+.ai-analysis-item h4 span {
+    margin-left: 5px;
+    color: #d3d0e7;
+    font: 400 9px "Be Vietnam Pro", sans-serif
+}
+
+.ai-analysis-item dl {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 0
+}
+
+.ai-analysis-item dl > div {
+    padding: 5px;
+    border-radius: 4px;
+    background: #ffffff0c
+}
+
+.ai-analysis-item dt {
+    color: #c3bfdc;
+    font-size: 7px
+}
+
+.ai-analysis-item dd {
+    margin: 3px 0 0;
+    color: #fff;
+    font-size: 8px
+}
+
+.ai-analysis-example {
+    margin: 8px 0 2px;
+    color: #fff;
+    font: 500 10px/1.6 "Yu Gothic", "Meiryo", sans-serif
+}
+
+.ai-analysis-translation {
+    margin: 0;
+    color: #d1d0e0;
+    font-size: 8px
+}
+
+.ai-analysis-context {
+    margin: 7px 0 0;
+    padding-top: 6px;
+    border-top: 1px solid #ffffff24;
+    color: #e3e1ef;
+    font-size: 8px;
+    line-height: 1.6
+}
+
+.ai-analysis-context strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #efc98e
+}
+
+.flashcard-panel {
+    max-width: 620px;
+    margin: 20px auto;
+    text-align: center
+}
+
+.flashcard-exit {
+    display: block;
+    margin: 0 0 22px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #716bb0;
+    font: 600 10px "Be Vietnam Pro", sans-serif;
+    cursor: pointer
+}
+
+.flashcard-mode > :not(.flashcard-panel) {
+    display: none !important
+}
+
+.flashcard-mode .flashcard-panel {
+    max-width: 850px;
+    min-height: calc(100vh - 150px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.flashcard-mode .flashcard-top {
+    width: min(100%, 680px);
+    margin: 0 auto
+}
+
+.flashcard-mode .flashcard {
+    width: min(100%, 680px);
+    min-height: min(52vh, 470px);
+    margin: 20px auto
+}
+
+.flashcard-mode .card-controls {
+    width: min(100%, 680px);
+    margin: 0 auto
+}
+
+.flashcard-top {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: end
+}
+
+.flashcard-top h2 {
+    font: 700 18px Manrope, sans-serif;
+    margin: 0
+}
+
+.flashcard-top > #card-progress {
+    color: #8889a0;
+    font-size: 10px
+}
+
+.flashcard {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 9px;
+    width: 100%;
+    min-height: 270px;
+    margin: 20px 0 14px;
+    padding: 24px;
+    border: 1px solid #e8e7f0;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #fff, #fbfaff);
+    cursor: pointer;
+    color: var(--ink);
+    box-shadow: 0 10px 35px #3938620b
+}
+
+.card-hint {
+    font-size: 8px;
+    letter-spacing: 1.3px;
+    color: #aaa9b7
+}
+
+.flashcard > strong {
+    font: 500 36px "Yu Mincho", "Yu Gothic", serif;
+    color: #534d9a
+}
+
+.flashcard > small {
+    font-size: 11px;
+    color: #a09eae
+}
+
+.flashcard > small,
+.flashcard .card-divider,
+.flashcard .card-back,
+.flashcard .card-example {
+    display: none;
+}
+
+.flashcard.flipped > small,
+.flashcard.flipped .card-divider,
+.flashcard.flipped .card-back,
+.flashcard.flipped .card-example {
+    display: block;
+}
+
+.card-divider {
+    width: 55px;
+    height: 1px;
+    background: #e9e7f2;
+    margin: 5px 0
+}
+
+.card-back {
+    font-size: 14px;
+    font-weight: 600;
+    color: #44455a
+}
+
+.card-example {
+    font-size: 10px;
+    color: #9999a5
+}
+
+.card-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px
+}
+
+.card-controls .button {
+    min-width: 110px
+}
+
+.quiz-panel {
+    max-width: 620px;
+    margin: 20px auto;
+    text-align: center
+}
+
+.quiz-prompt {
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+    margin: 20px 0 15px;
+    padding: 27px 15px;
+    background: linear-gradient(145deg, #fff, #fbfaff);
+    border: 1px solid #e8e7f0;
+    border-radius: 12px
+}
+
+.quiz-prompt strong {
+    font: 500 34px "Yu Mincho", "Yu Gothic", serif;
+    color: #534d9a
+}
+
+.quiz-prompt small {
+    font-size: 10px;
+    color: #9293a1
+}
+
+.quiz-options {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 9px
+}
+
+.quiz-option {
+    min-height: 48px;
+    padding: 9px;
+    border: 1px solid #e8e8ef;
+    border-radius: 8px;
+    background: #fff;
+    color: #5d5e70;
+    font: 500 10px "Be Vietnam Pro", sans-serif;
+    cursor: pointer
+}
+
+.quiz-option:hover:not(:disabled) {
+    border-color: #aaa4d8;
+    background: #faf9ff
+}
+
+.quiz-option.correct {
+    border-color: #77b693;
+    background: #eff8f2;
+    color: #337151
+}
+
+.quiz-option.incorrect {
+    border-color: #d79a9a;
+    background: #fff4f3;
+    color: #a45353
+}
+
+.quiz-option:disabled {
+    cursor: default
+}
+
+.quiz-feedback {
+    min-height: 22px;
+    margin: 13px 0;
+    color: #6b6c7d;
+    font-size: 10px;
+    line-height: 1.55
+}
+
+.quiz-panel > .button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+.interview-heading {
+    margin-bottom: 22px
+}
+
+.interview-stamp {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 14px;
+    border: 1px solid #e8e6f0;
+    border-radius: 8px;
+    color: #a19dc8
+}
+
+.interview-stamp strong {
+    font: 22px "Yu Mincho", serif
+}
+
+.interview-stamp span {
+    font-size: 7px;
+    line-height: 1.5;
+    letter-spacing: .8px
+}
+
+.interview-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eeedf8;
+    padding: 15px 17px;
+    border-radius: 9px
+}
+
+.interview-intro > div {
+    display: flex;
+    align-items: center;
+    gap: 11px
+}
+
+.intro-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    background: #fff;
+    color: #6860b5;
+    display: grid;
+    place-items: center;
+    font: 17px "Yu Mincho", serif
+}
+
+.interview-intro strong {
+    font-size: 10px
+}
+
+.interview-intro p {
+    font-size: 9px;
+    color: #88899a;
+    margin: 5px 0 0
+}
+
+.question-total {
+    font-size: 9px;
+    color: #9292a1;
+    white-space: nowrap
+}
+
+.question-total strong {
+    font-size: 15px;
+    color: #57509d;
+    margin-right: 3px
+}
+
+.interview-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin: 16px 0
+}
+
+.filter-chip {
+    padding: 7px 11px;
+    border: 1px solid #e8e8ef;
+    background: #fff;
+    border-radius: 20px;
+    font: 9px "Be Vietnam Pro", sans-serif;
+    color: #797b8c;
+    cursor: pointer
+}
+
+.filter-chip.active {
+    background: #5e57ae;
+    border-color: #5e57ae;
+    color: #fff
+}
+
+.question-grid {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: 11px
+}
+
+.question-card {
+    background: #fff;
+    border: 1px solid #eaeaf0;
+    border-radius: 9px;
+    padding: 15px 15px 12px
+}
+
+.question-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.category-tag {
+    background: #f1effa;
+    color: #655caf;
+    border-radius: 4px;
+    padding: 4px 7px;
+    font-size: 8px
+}
+
+.question-number {
+    font-size: 9px;
+    color: #b0b0bb
+}
+
+.question-card h3 {
+    font: 500 14px/1.65 "Yu Gothic", "Meiryo", sans-serif;
+    margin: 12px 0 7px;
+    color: #36384b
+}
+
+.question-card .question-meaning {
+    font-size: 9px;
+    color: #9293a1;
+    line-height: 1.5;
+    margin: 0;
+    min-height: 27px
+}
+
+.question-card-bottom {
+    border-top: 1px solid #f0f0f4;
+    margin-top: 12px;
+    padding-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.question-card-bottom button {
+    border: 0;
+    background: none;
+    color: #6058ad;
+    font: 600 9px "Be Vietnam Pro", sans-serif;
+    cursor: pointer
+}
+
+.answer-hint {
+    font-size: 9px;
+    line-height: 1.6;
+    color: #7f8090;
+    background: #f8f7fc;
+    padding: 9px;
+    border-radius: 5px;
+    margin-top: 9px
+}
+
+.answer-hint[hidden] {
+    display: none
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 10;
+    max-width: min(360px, calc(100vw - 32px));
+    background: #292a3c;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 11px;
+    box-shadow: 0 8px 30px #22233338;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: .2s
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.toast.success {
+    background: #245c4b
+}
+
+.toast.error {
+    background: #8d3f43
+}
+
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+    background: #23243b77;
+    display: grid;
+    place-items: center;
+    padding: 18px
+}
+
+.modal-backdrop[hidden] {
+    display: none
+}
+
+.auth-modal {
+    position: relative;
+    width: min(410px, 100%);
+    background: #fff;
+    border-radius: 13px;
+    padding: 27px 30px 23px;
+    box-shadow: 0 24px 80px #29294c35
+}
+
+.modal-close {
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    border: 0;
+    background: none;
+    font-size: 23px;
+    color: #999;
+    cursor: pointer
+}
+
+.modal-brand {
+    padding: 0 0 25px
+}
+
+.auth-modal > .eyebrow {
+    margin-bottom: 7px
+}
+
+.auth-modal h2 {
+    font: 700 20px Manrope, sans-serif;
+    margin: 0
+}
+
+.auth-description {
+    font-size: 10px;
+    color: #9293a1;
+    line-height: 1.55;
+    margin: 8px 0 16px
+}
+
+.auth-tabs {
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    border-bottom: 1px solid #eaeaf0;
+    margin-bottom: 16px
+}
+
+.auth-tabs button {
+    border: 0;
+    background: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+    color: #9293a1;
+    font: 10px "Be Vietnam Pro", sans-serif;
+    cursor: pointer
+}
+
+.auth-tabs button.active {
+    border-color: #625bb3;
+    color: #514a9e;
+    font-weight: 700
+}
+
+.auth-note {
+    text-align: center;
+    color: #9a9aa7;
+    font-size: 8px;
+    line-height: 1.5;
+    margin: 14px 0 0
+}
+
+.no-results {
+    text-align: center;
+    padding: 25px;
+    color: #999;
+    font-size: 10px
+}
+
+@media (min-width: 1450px) {
+    .main-content {
+        padding-left: 6.5%;
+        padding-right: 6.5%
+    }
+
+    .hero-banner {
+        min-height: 270px
+    }
+
+    .hero-copy {
+        padding: 37px 43px
+    }
+
+    .hero-copy h2 {
+        font-size: 29px
+    }
+}
+
+@media (max-width: 980px) {
+    .sidebar {
+        width: 210px
+    }
+
+    .main-content {
+        margin-left: 210px;
+        padding: 0 4%
+    }
+
+    .vocab-layout {
+        grid-template-columns:1fr
+    }
+
+    .vocab-side {
+        grid-template-columns:1fr 1fr
+    }
+
+    .add-panel {
+        grid-row: span 2
+    }
+
+    .hero-copy {
+        width: 55%
+    }
+
+    .hero-art {
+        left: 49%
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: auto;
+        height: 60px;
+        inset: auto 0 0;
+        padding: 5px 8px;
+        border-right: 0;
+        border-top: 1px solid #e9e9f0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background: #fff
+    }
+
+    .sidebar > .brand, .sidebar > .side-label, .sidebar > .sidebar-spacer, .sidebar > .side-promo, .sidebar > .profile-button {
+        display: none
+    }
+
+    .main-nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        gap: 3px
+    }
+
+    .nav-link {
+        height: 45px;
+        min-width: 83px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1px;
+        padding: 3px 5px;
+        font-size: 8px
+    }
+
+    .nav-link span {
+        font-size: 15px;
+        width: auto
+    }
+
+    .nav-count {
+        position: absolute;
+        margin: 0 0 0 42px;
+        padding: 1px 4px;
+        font-size: 7px
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 0 18px 75px
+    }
+
+    .topbar {
+        height: 55px
+    }
+
+    .today-label {
+        display: none
+    }
+
+    .topbar-actions {
+        gap: 0
+    }
+
+    .view {
+        padding-top: 25px
+    }
+
+    .welcome-row h1, .page-heading h1 {
+        font-size: 23px
+    }
+
+    .welcome-decoration {
+        transform: scale(.75);
+        transform-origin: right center;
+        width: 90px
+    }
+
+    .hero-banner {
+        min-height: 255px;
+        margin: 17px 0 27px
+    }
+
+    .hero-copy {
+        padding: 24px 21px;
+        width: 70%
+    }
+
+    .hero-copy h2 {
+        font-size: 22px
+    }
+
+    .hero-copy p {
+        max-width: 240px;
+        font-size: 9px
+    }
+
+    .hero-art {
+        left: 45%;
+        opacity: .73
+    }
+
+    .sun {
+        right: 13%;
+        width: 75px;
+        height: 75px
+    }
+
+    .art-card {
+        right: 10%;
+        width: 145px;
+        height: 78px;
+        bottom: 22px;
+        padding: 11px 14px
+    }
+
+    .art-card strong {
+        font-size: 14px
+    }
+
+    .section-note {
+        display: none
+    }
+
+    .feature-grid, .bottom-grid {
+        grid-template-columns:1fr
+    }
+
+    .feature-card {
+        min-height: 165px
+    }
+
+    .feature-grid {
+        gap: 10px
+    }
+
+    .bottom-grid {
+        gap: 10px
+    }
+
+    .page-heading {
+        align-items: flex-start;
+        gap: 10px
+    }
+
+    .page-heading > .button {
+        margin-top: 20px;
+        padding: 0 10px;
+        font-size: 9px;
+        white-space: nowrap
+    }
+
+    .page-heading .lead {
+        max-width: 270px;
+        line-height: 1.5
+    }
+
+    .vocab-layout {
+        display: flex;
+        flex-direction: column
+    }
+
+    .vocab-side {
+        display: grid;
+        grid-template-columns:1fr
+    }
+
+    .add-panel {
+        grid-row: auto
+    }
+
+    .interview-stamp {
+        padding: 7px 9px
+    }
+
+    .interview-stamp strong {
+        font-size: 18px
+    }
+
+    .interview-intro {
+        align-items: flex-start;
+        padding: 12px
+    }
+
+    .interview-intro p {
+        max-width: 250px;
+        line-height: 1.5
+    }
+
+    .question-total {
+        font-size: 8px
+    }
+
+    .question-grid {
+        grid-template-columns:1fr
+    }
+
+    .question-card {
+        padding: 13px
+    }
+
+    .interview-filters {
+        gap: 5px
+    }
+
+    .filter-chip {
+        padding: 7px 9px;
+        font-size: 8px
+    }
+
+    .vocabulary-toolbar {
+        gap: 8px
+    }
+
+    .vocab-tool-actions {
+        gap: 5px
+    }
+
+    .set-name-input {
+        width: 112px;
+        height: 28px;
+        font-size: 8px
+    }
+
+    .tab-switch {
+        gap: 11px
+    }
+
+    .tab-button {
+        font-size: 9px
+    }
+
+    .upload-button {
+        font-size: 8px;
+        padding: 0 7px
+    }
+
+    .deck-filter {
+        min-width: 125px
+    }
+
+    .import-hint {
+        line-height: 1.8
+    }
+
+    .auth-modal {
+        padding: 24px 22px 20px
+    }
+
+    .welcome-decoration {
+        display: none
+    }
+}
+
+@media (max-width: 380px) {
+    .main-content {
+        padding-left: 13px;
+        padding-right: 13px
+    }
+
+    .breadcrumb {
+        font-size: 9px
+    }
+
+    .nav-link {
+        min-width: 72px
+    }
+
+    .page-heading h1 {
+        font-size: 20px
+    }
+
+    .page-heading > .button {
+        gap: 5px
+    }
+
+    .hero-copy {
+        width: 78%;
+        padding-left: 17px
+    }
+
+    .hero-art {
+        left: 42%
+    }
+
+    .hero-copy h2 {
+        font-size: 20px
+    }
+}
+
+.app-shell[hidden] {
+    display: none !important
+}
+
+.landing-page {
+    min-height: 100vh;
+    background: #fbfaf7;
+    color: #242638;
+    overflow: hidden
+}
+
+.landing-page [data-scroll-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .65s ease, transform .65s cubic-bezier(.2, .7, .2, 1)
+}
+
+.landing-page [data-scroll-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.landing-feature-card:nth-child(2) {
+    transition-delay: .08s
+}
+
+.landing-feature-card:nth-child(3) {
+    transition-delay: .16s
+}
+
+.landing-page[hidden] [data-scroll-reveal] {
+    opacity: 1;
+    transform: none
+}
+
+.landing-nav,
+.landing-footer {
+    max-width: 1280px;
+    margin: auto;
+    padding: 18px 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px
+}
+
+.landing-nav {
+    position: relative;
+    z-index: 20
+}
+
+.landing-nav nav {
+    display: flex;
+    align-items: center;
+    gap: 24px
+}
+
+.interview-nav-item {
+    position: relative
+}
+
+.interview-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: #626271;
+    font: 500 12px "Be Vietnam Pro", sans-serif;
+    cursor: pointer;
+    transition: color .2s ease
+}
+
+.interview-nav-toggle:hover,
+.interview-nav-toggle[aria-expanded="true"] {
+    color: #5e57ae
+}
+
+.dropdown-chevron {
+    display: inline-block;
+    transition: transform .24s cubic-bezier(.2, .7, .2, 1)
+}
+
+.interview-nav-item.open .dropdown-chevron {
+    transform: rotate(180deg)
+}
+
+.interview-nav-menu {
+    position: absolute;
+    top: calc(100% + 9px);
+    left: 50%;
+    width: 252px;
+    max-height: 0;
+    padding: 0 7px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: #fff;
+    box-shadow: 0 16px 38px #2926401c;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: translate(-50%, -8px) scale(.98);
+    transform-origin: top center;
+    visibility: hidden;
+    transition: max-height .34s cubic-bezier(.2, .7, .2, 1), padding .28s ease,
+        opacity .2s ease, transform .28s cubic-bezier(.2, .7, .2, 1),
+        visibility .28s, border-color .2s ease
+}
+
+.interview-nav-item.open .interview-nav-menu {
+    max-height: 410px;
+    padding: 7px;
+    border-color: #eeedf3;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1);
+    visibility: visible
+}
+
+.interview-nav-menu button {
+    width: 100%;
+    min-height: 39px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 9px;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: #555667;
+    font: 500 10px "Be Vietnam Pro", sans-serif;
+    text-align: left;
+    cursor: pointer;
+    transition: background .18s ease, color .18s ease, transform .18s ease
+}
+
+.interview-nav-menu button:hover,
+.interview-nav-menu button:focus-visible {
+    background: #f3f1fb;
+    color: #51499f;
+    transform: translateX(2px)
+}
+
+.interview-nav-menu button > span:first-child {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+    display: grid;
+    place-items: center;
+    border-radius: 6px;
+    background: #f3f1fa;
+    color: #6259ad;
+    font: 600 10px "Yu Gothic", "Meiryo", sans-serif
+}
+
+.landing-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: inherit;
+    text-decoration: none
+}
+
+.landing-brand .brand-mark {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    font-size: 17px
+}
+
+.landing-brand strong,
+.landing-brand small {
+    display: block
+}
+
+.landing-brand strong {
+    font: 800 17px "Manrope", sans-serif;
+    letter-spacing: -.7px
+}
+
+.landing-brand small {
+    margin-top: 2px;
+    color: #9997a0;
+    font-size: 7px;
+    letter-spacing: 1.5px
+}
+
+.landing-nav nav,
+.landing-actions {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.landing-nav nav a,
+.landing-login,
+.landing-hero-actions a {
+    color: #626271;
+    font: 500 12px "Be Vietnam Pro", sans-serif;
+    text-decoration: none
+}
+
+.landing-nav nav a:hover,
+.landing-login:hover,
+.landing-hero-actions a:hover {
+    color: #5e57ae
+}
+
+.landing-login,
+.landing-footer button {
+    border: 0;
+    background: none;
+    cursor: pointer
+}
+
+.landing-cta,
+.landing-footer button {
+    border: 0;
+    border-radius: 6px;
+    padding: 12px 17px;
+    color: white;
+    background: #5e57ae;
+    font: 600 11px "Be Vietnam Pro", sans-serif;
+    cursor: pointer;
+    transition: background .2s, transform .2s
+}
+
+.landing-cta:hover,
+.landing-footer button:hover {
+    background: #4a438f;
+    transform: translateY(-1px)
+}
+
+.landing-cta span {
+    padding-left: 9px
+}
+
+.landing-hero {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 55px 5.5% 72px;
+    display: grid;
+    grid-template-columns: .92fr 1.08fr;
+    align-items: center;
+    gap: 6%
+}
+
+.landing-hero-copy {
+    padding: 5px 0 0
+}
+
+.landing-kicker {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 20px;
+    color: #77718d;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.8px
+}
+
+.landing-kicker > span {
+    width: 22px;
+    height: 1px;
+    background: #8d83c4
+}
+
+.landing-hero h1,
+.landing-section h2,
+.method-copy h2 {
+    margin: 0;
+    font: 500 clamp(43px, 5.5vw, 72px)/1.12 "Manrope", "Be Vietnam Pro", sans-serif;
+    letter-spacing: -3.4px
+}
+
+.landing-hero h1 em,
+.landing-section h2 em,
+.method-copy h2 em {
+    color: #6a61b4;
+    font-style: normal
+}
+
+.landing-lead {
+    max-width: 440px;
+    margin: 20px 0 27px;
+    color: #777987;
+    font-size: 14px;
+    line-height: 1.9
+}
+
+.landing-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px
+}
+
+.landing-cta-large {
+    padding: 15px 20px;
+    font-size: 12px
+}
+
+.landing-hero-actions a span {
+    padding-left: 6px
+}
+
+.landing-proof {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 37px
+}
+
+.proof-avatars {
+    display: flex;
+    padding-left: 3px
+}
+
+.proof-avatars i {
+    width: 31px;
+    height: 31px;
+    margin-left: -3px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #fbfaf7;
+    border-radius: 50%;
+    background: #dedaf1;
+    color: #544d91;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 700
+}
+
+.proof-avatars i:nth-child(2) {
+    background: #f0dfd1;
+    color: #8d6147
+}
+
+.proof-avatars i:nth-child(3) {
+    background: #d7e5df;
+    color: #3c7263
+}
+
+.landing-proof strong,
+.landing-proof small {
+    display: block
+}
+
+.landing-proof strong {
+    font-size: 10px;
+    font-weight: 600
+}
+
+.landing-proof small {
+    margin-top: 3px;
+    color: #9696a0;
+    font-size: 9px
+}
+
+.landing-hero-visual {
+    position: relative;
+    min-height: 440px;
+    border-radius: 10px 10px 80px 10px;
+    background: linear-gradient(140deg, #c9c4d2, #77788d);
+    overflow: hidden
+}
+
+.landing-hero-visual > img,
+.method-image > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: cover
+}
+
+.visual-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #17172a00 30%, #151524a8 100%)
+}
+
+.visual-caption {
+    position: absolute;
+    left: 36px;
+    bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    color: #fff
+}
+
+.visual-caption > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    opacity: .8
+}
+
+.visual-caption strong {
+    margin: 6px 0;
+    font: 600 31px "Manrope", sans-serif
+}
+
+.visual-caption small {
+    font-size: 10px;
+    opacity: .8
+}
+
+.floating-note {
+    position: absolute;
+    top: 26px;
+    left: -18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    border: 1px solid #ffffffa6;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 12px 30px #27243d20
+}
+
+.floating-note > span {
+    display: grid;
+    width: 30px;
+    height: 30px;
+    place-items: center;
+    border-radius: 6px;
+    background: #f0eef9;
+    color: #6259ad
+}
+
+.floating-note strong,
+.floating-note small {
+    display: block
+}
+
+.floating-note strong {
+    font-size: 10px
+}
+
+.floating-note small {
+    margin-top: 3px;
+    color: #898998;
+    font-size: 8px
+}
+
+.floating-note b {
+    margin-left: 16px;
+    color: #b6b2c7;
+    font: 500 11px "Manrope", sans-serif
+}
+
+.visual-stamp {
+    position: absolute;
+    top: 26px;
+    right: 24px;
+    color: #fff;
+    font: 500 23px/1.1 "Manrope", sans-serif;
+    text-align: center;
+    text-shadow: 0 2px 8px #1115
+}
+
+.visual-stamp small {
+    display: block;
+    margin-top: 7px;
+    font: 600 6px/1.5 "Be Vietnam Pro", sans-serif;
+    letter-spacing: 1.5px
+}
+
+.landing-trust {
+    max-width: 1150px;
+    margin: auto;
+    padding: 24px 5.5%;
+    border-top: 1px solid #ecebf0;
+    border-bottom: 1px solid #ecebf0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    color: #777987;
+    font-size: 10px
+}
+
+.landing-trust > span {
+    color: #aaa8b1;
+    font-size: 8px;
+    letter-spacing: 1.1px
+}
+
+.landing-trust b {
+    margin-right: 7px;
+    color: #6259ad;
+    font: 700 13px "Manrope", sans-serif
+}
+
+.landing-section {
+    max-width: 1280px;
+    margin: auto;
+    padding: 105px 5.5% 110px
+}
+
+.landing-section-heading {
+    max-width: 620px;
+    margin: 0 auto 43px;
+    text-align: center
+}
+
+.landing-section-heading .landing-kicker {
+    justify-content: center
+}
+
+.landing-section h2,
+.method-copy h2 {
+    font-size: clamp(35px, 4vw, 49px);
+    letter-spacing: -2px
+}
+
+.landing-section-heading > p:last-child,
+.method-copy > p:not(.landing-kicker) {
+    max-width: 570px;
+    margin: 17px auto 0;
+    color: #82838f;
+    font-size: 12px;
+    line-height: 1.9
+}
+
+.landing-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px
+}
+
+.landing-feature-card {
+    min-height: 292px;
+    padding: 23px;
+    border: 1px solid #eeedf2;
+    border-radius: 9px;
+    background: #fff
+}
+
+.landing-feature-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 7px;
+    background: #f0eef9;
+    color: #6259ad;
+    font: 600 16px "Manrope", sans-serif
+}
+
+.landing-feature-number {
+    color: #aaa8b2;
+    font-size: 8px;
+    letter-spacing: 1.2px
+}
+
+.landing-feature-card h3 {
+    margin: 8px 0;
+    font: 700 15px "Manrope", "Be Vietnam Pro", sans-serif
+}
+
+.landing-feature-card > p {
+    min-height: 57px;
+    margin: 0;
+    color: #83848f;
+    font-size: 10px;
+    line-height: 1.8
+}
+
+.mini-vocab,
+.mini-chat,
+.mini-answer {
+    margin-top: 18px;
+    padding: 12px;
+    border: 1px solid #efedf4;
+    border-radius: 6px;
+    background: #fbfaff
+}
+
+.mini-vocab {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px 10px
+}
+
+.mini-vocab > span {
+    font-size: 12px;
+    font-weight: 700
+}
+
+.mini-vocab small {
+    margin-left: 5px;
+    color: #9c9aa8;
+    font-size: 8px;
+    font-weight: 400
+}
+
+.mini-vocab b {
+    color: #747582;
+    font-size: 9px;
+    font-weight: 500
+}
+
+.mini-vocab i,
+.mini-answer i {
+    grid-column: 1 / -1;
+    color: #6b9b87;
+    font-size: 7px;
+    font-style: normal;
+    letter-spacing: 1px
+}
+
+.mini-chat > span {
+    display: block;
+    margin-bottom: 7px;
+    color: #858594;
+    font-size: 8px
+}
+
+.mini-chat > span small {
+    margin-left: 4px
+}
+
+.mini-chat strong,
+.mini-chat b {
+    display: block;
+    font-size: 10px
+}
+
+.mini-chat b {
+    margin-top: 5px;
+    color: #858594;
+    font-size: 8px;
+    font-weight: 400
+}
+
+.mini-answer span,
+.mini-answer strong {
+    display: block
+}
+
+.mini-answer span {
+    color: #858594;
+    font-size: 8px
+}
+
+.mini-answer strong {
+    margin: 7px 0;
+    color: #5d559e;
+    font-size: 10px
+}
+
+.mini-answer i {
+    color: #907da8
+}
+
+.landing-method {
+    max-width: 1180px;
+    margin: 0 auto 100px;
+    padding: 0 5.5%;
+    display: grid;
+    grid-template-columns: .95fr 1fr;
+    align-items: center;
+    gap: 9%
+}
+
+.method-image {
+    position: relative;
+    min-height: 440px;
+    border-radius: 8px 8px 70px 8px;
+    background: #d9d4e5;
+    overflow: hidden
+}
+
+.method-image-note {
+    position: absolute;
+    right: -1px;
+    bottom: 25px;
+    padding: 14px 18px;
+    border-radius: 5px 0 0 5px;
+    background: white;
+    box-shadow: 0 8px 22px #24263820
+}
+
+.method-image-note b,
+.method-image-note span {
+    display: block
+}
+
+.method-image-note b {
+    color: #5e57ae;
+    font: 700 13px "Manrope", sans-serif
+}
+
+.method-image-note span {
+    margin-top: 4px;
+    color: #858590;
+    font-size: 8px
+}
+
+.method-copy h2 {
+    font-size: clamp(34px, 4vw, 47px)
+}
+
+.method-copy > p:not(.landing-kicker) {
+    margin: 15px 0 24px
+}
+
+.method-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    padding: 13px 0;
+    border-bottom: 1px solid #eae9ef
+}
+
+.method-step > span {
+    color: #7b73bb;
+    font: 700 10px "Manrope", sans-serif
+}
+
+.method-step strong,
+.method-step small {
+    display: block
+}
+
+.method-step strong {
+    font-size: 10px
+}
+
+.method-step small {
+    margin-top: 4px;
+    color: #8e8f99;
+    font-size: 9px
+}
+
+.method-copy > .landing-cta {
+    margin-top: 22px
+}
+
+.landing-quote {
+    padding: 55px 20px 59px;
+    background: #f0eff7;
+    text-align: center
+}
+
+.quote-mark {
+    display: block;
+    height: 36px;
+    color: #938bc8;
+    font: 500 56px/1 "Manrope", sans-serif
+}
+
+.landing-quote p {
+    margin: 12px 0;
+    color: #555667;
+    font: 400 20px/1.7 "Manrope", "Be Vietnam Pro", sans-serif
+}
+
+.landing-quote p strong {
+    color: #5e57ae;
+    font-weight: 700
+}
+
+.quote-japanese {
+    color: #8c899e;
+    font: 500 11px "Manrope", sans-serif;
+    letter-spacing: 1px
+}
+
+.landing-footer {
+    max-width: 1180px;
+    padding-top: 23px;
+    padding-bottom: 23px
+}
+
+.landing-footer > span {
+    color: #8c8d98;
+    font-size: 9px
+}
+
+.landing-footer button {
+    padding: 10px 14px;
+    font-size: 9px
+}
+
+.answer-generator {
+    margin-top: 14px;
+    padding: 12px;
+    border-radius: 7px;
+    background: #faf9fd
+}
+
+.answer-generator label {
+    display: block;
+    color: #555667;
+    font-size: 9px;
+    font-weight: 600
+}
+
+.answer-generator textarea {
+    width: 100%;
+    min-height: 80px;
+    margin-top: 7px;
+    padding: 9px;
+    border: 1px solid #e6e4ee;
+    border-radius: 5px;
+    background: #fff;
+    color: #373849;
+    font: 400 10px/1.6 "Be Vietnam Pro", sans-serif;
+    resize: vertical
+}
+
+.answer-generator .button {
+    min-height: 34px;
+    margin-top: 8px;
+    padding: 7px 10px;
+    font-size: 9px
+}
+
+.generated-answer {
+    margin-top: 12px;
+    padding: 12px;
+    border-left: 2px solid #756db9;
+    border-radius: 3px;
+    background: #fff
+}
+
+.generated-answer[hidden] {
+    display: none
+}
+
+.answer-label {
+    color: #7770b3;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 1px
+}
+
+.answer-japanese {
+    margin: 8px 0;
+    color: #292b3d;
+    font: 500 13px/1.8 "Yu Gothic", "Meiryo", sans-serif
+}
+
+.answer-translation {
+    margin: 0;
+    color: #747582;
+    font-size: 9px;
+    line-height: 1.7
+}
+
+.answer-breakdown {
+    margin-top: 9px;
+    border-top: 1px solid #efedf4
+}
+
+.answer-breakdown p {
+    margin: 8px 0 0;
+    color: #777987;
+    font-size: 9px;
+    line-height: 1.6
+}
+
+.answer-breakdown strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #4c4d5f
+}
+
+@media (max-width: 850px) {
+    .landing-hero {
+        grid-template-columns: 1fr .95fr;
+        gap: 4%;
+        padding-top: 40px
+    }
+
+    .landing-hero-visual {
+        min-height: 370px
+    }
+
+    .landing-trust {
+        flex-wrap: wrap;
+        justify-content: center
+    }
+
+    .landing-trust > span {
+        flex-basis: 100%;
+        text-align: center
+    }
+
+    .landing-method {
+        gap: 5%
+    }
+
+    .method-image {
+        min-height: 380px
+    }
+}
+
+@media (max-width: 620px) {
+    .landing-nav,
+    .landing-footer {
+        padding: 14px 5%
+    }
+
+    .landing-nav {
+        flex-wrap: wrap;
+        gap: 10px
+    }
+
+    .landing-nav nav {
+        order: 3;
+        width: 100%;
+        justify-content: flex-end
+    }
+
+    .landing-nav nav > a {
+        display: none
+    }
+
+    .interview-nav-toggle {
+        padding: 5px 0;
+        font-size: 10px
+    }
+
+    .interview-nav-menu {
+        left: auto;
+        right: 0;
+        transform: translateY(-8px) scale(.98);
+        transform-origin: top right
+    }
+
+    .interview-nav-item.open .interview-nav-menu {
+        transform: translateY(0) scale(1)
+    }
+
+    .landing-actions {
+        gap: 12px
+    }
+
+    .landing-login {
+        font-size: 10px
+    }
+
+    .landing-cta {
+        padding: 10px 12px;
+        font-size: 9px
+    }
+
+    .landing-hero {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 42px 6% 48px
+    }
+
+    .landing-hero h1 {
+        font-size: clamp(42px, 12vw, 61px);
+        letter-spacing: -2.7px
+    }
+
+    .landing-lead {
+        max-width: 460px;
+        font-size: 12px
+    }
+
+    .landing-hero-visual {
+        min-height: 330px;
+        margin-left: 12px
+    }
+
+    .landing-trust {
+        gap: 13px 22px;
+        font-size: 9px
+    }
+
+    .landing-section {
+        padding: 72px 6%
+    }
+
+    .landing-section-heading {
+        margin-bottom: 28px
+    }
+
+    .landing-feature-grid {
+        grid-template-columns: 1fr;
+        gap: 11px
+    }
+
+    .landing-feature-card {
+        min-height: auto
+    }
+
+    .landing-feature-card > p {
+        min-height: 0
+    }
+
+    .landing-method {
+        grid-template-columns: 1fr;
+        gap: 29px;
+        margin-bottom: 65px;
+        padding: 0 6%
+    }
+
+    .method-image {
+        min-height: 330px
+    }
+
+    .method-copy h2 {
+        font-size: 36px
+    }
+
+    .landing-quote p {
+        font-size: 16px
+    }
+
+    .landing-footer {
+        flex-wrap: wrap;
+        gap: 12px
+    }
+
+    .landing-footer > span {
+        order: 2;
+        flex-basis: 100%
+    }
+
+    .landing-footer button {
+        margin-left: auto
+    }
+
+    .toast {
+        top: 12px;
+        right: 12px;
+        max-width: calc(100vw - 24px)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important
+    }
+
+    .landing-page [data-scroll-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none
+    }
+
+    .landing-page a,
+    .landing-page button {
+        scroll-behavior: auto
+    }
+}
+
+.quiz-mode > :not(.quiz-panel) {
+    display: none !important
+}
+
+.quiz-mode .quiz-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(100%, 850px);
+    min-height: calc(100vh - 150px);
+    margin: 0 auto;
+    text-align: center
+}
+
+.quiz-mode .quiz-panel .flashcard-exit {
+    align-self: flex-start
+}
+
+.quiz-mode .quiz-options {
+    width: min(100%, 620px);
+    margin: 0 auto
+}
+
+.reference-note,
+.reference-card,
+.keigo-type {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+    box-shadow: 0 12px 35px #17181512
+}
+
+.reference-note {
+    margin: 20px 0;
+    padding: 20px 24px;
+    border-left: 3px solid #9a6b59
+}
+
+.reference-note strong,
+.reference-card h2,
+.keigo-type h2 {
+    color: var(--ink)
+}
+
+.reference-note p,
+.reference-card > p,
+.keigo-type p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8
+}
+
+.reference-note p {
+    margin: 8px 0 0
+}
+
+.reference-grid,
+.keigo-types {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 16px
+}
+
+.reference-card,
+.keigo-type {
+    padding: 22px
+}
+
+.reference-label {
+    color: #a27a62;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.3px
+}
+
+.reference-card h2,
+.keigo-type h2 {
+    margin: 8px 0 14px;
+    font: 700 18px Manrope, "Be Vietnam Pro", sans-serif
+}
+
+.phrase-row {
+    padding: 12px 0;
+    border-top: 1px solid var(--line)
+}
+
+.phrase-row p {
+    margin: 0 0 4px;
+    color: var(--ink);
+    font-family: "Yu Gothic", "Meiryo", sans-serif;
+    font-size: 15px;
+    line-height: 1.65
+}
+
+.phrase-row span {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.7
+}
+
+.keigo-types {
+    margin-top: 0
+}
+
+.keigo-type {
+    position: relative;
+    overflow: hidden
+}
+
+.keigo-type > span {
+    color: #a27a62;
+    font: 700 12px Manrope, sans-serif;
+    letter-spacing: 1px
+}
+
+.keigo-type p {
+    margin: 10px 0 0
+}
+
+.keigo-table-card {
+    margin-top: 16px
+}
+
+.table-scroll {
+    overflow-x: auto
+}
+
+.keigo-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 11px
+}
+
+.keigo-table th,
+.keigo-table td {
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top
+}
+
+.keigo-table th {
+    color: var(--muted);
+    font-weight: 600
+}
+
+.keigo-table td {
+    color: var(--ink)
+}
+
+.keigo-steps {
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.9
+}
+
+.keigo-steps b {
+    color: var(--ink)
+}
+
+
+@media (max-width: 700px) {
+    .reference-grid,
+    .keigo-types {
+        grid-template-columns: 1fr
+    }
+
+    .keigo-table {
+        min-width: 700px
+    }
+}
+
+.word-ai-button {
+    width: auto !important;
+    padding: 0 7px;
+    color: #6159b6 !important;
+    font: 600 9px "Be Vietnam Pro", sans-serif
+}
+
+.word-ai-button:disabled {
+    opacity: .65;
+    cursor: wait
+}
+
+.word-ai-result {
+    margin-top: 9px;
+    padding: 10px 12px;
+    border: 1px solid #e8e7f0;
+    border-radius: 7px;
+    background: #fbfaff;
+    color: #5f6070;
+    font-size: 9px;
+    line-height: 1.65
+}
+
+.word-ai-result > strong {
+    display: block;
+    color: #51499f
+}
+
+.word-ai-result dl {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    margin: 8px 0
+}
+
+.word-ai-result dl div {
+    min-width: 0
+}
+
+.word-ai-result dt {
+    color: #9293a1;
+    font-size: 8px
+}
+
+.word-ai-result dd {
+    margin: 2px 0 0;
+    overflow-wrap: anywhere
+}
+
+.word-ai-result p {
+    margin: 5px 0
+}
+
+.word-ai-result small {
+    display: block;
+    margin-top: 6px;
+    color: #777987
+}
+
+.quiz-summary {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    width: min(100%, 620px);
+    margin: 20px auto;
+    padding: 28px;
+    border: 1px solid #e8e7f0;
+    border-radius: 12px;
+    background: linear-gradient(145deg, #fff, #fbfaff)
+}
+
+.quiz-summary strong {
+    color: #534d9a;
+    font: 700 48px Manrope, "Be Vietnam Pro", sans-serif
+}
+
+.quiz-summary span {
+    color: #6b6c7d;
+    font-size: 12px
+}
+
+.quiz-mode .quiz-panel > .button {
+    align-self: center
+}
+
+[hidden] {
+    display: none !important
+}
+
+.dictionary-selection-toast {
+    position: fixed;
+    z-index: 1000;
+    display: grid;
+    gap: 5px;
+    width: min(320px, calc(100vw - 24px));
+    max-height: min(220px, calc(100vh - 24px));
+    overflow: auto;
+    padding: 13px 36px 13px 15px;
+    border: 1px solid #e8e4f6;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, .98);
+    box-shadow: 0 12px 36px rgba(38, 40, 58, .18);
+    color: #55566a;
+    font-size: 11px;
+    line-height: 1.55;
+    animation: dictionary-toast-in .16s ease-out
+}
+
+.dictionary-toast-kicker {
+    color: #8178c7;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .12em
+}
+
+.dictionary-selection-toast > strong {
+    color: #282a3d;
+    font: 700 16px "Be Vietnam Pro", "Yu Gothic", sans-serif
+}
+
+.dictionary-selection-toast > strong small {
+    color: #8a879d;
+    font-size: 11px;
+    font-weight: 500
+}
+
+.dictionary-selection-toast > small {
+    color: #9293a1;
+    font-size: 9px
+}
+
+.dictionary-toast-close {
+    position: absolute;
+    top: 7px;
+    right: 9px;
+    width: 24px;
+    height: 24px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #9293a1;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1
+}
+
+.dictionary-toast-close:hover {
+    background: #f3f1fa;
+    color: #534d9a
+}
+
+@keyframes dictionary-toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(4px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dictionary-selection-toast {
+        animation: none
+    }
+}
+
+.book-management {
+    margin: 20px 0;
+    padding: 18px;
+    border: 1px solid #e9e8f1;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff, #fbfaff)
+}
+
+.book-management-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 14px
+}
+
+.book-management-heading .eyebrow {
+    margin: 0 0 4px
+}
+
+.book-management-heading h2 {
+    margin: 0;
+    color: #333449;
+    font: 700 16px Manrope, "Be Vietnam Pro", sans-serif
+}
+
+.book-create-form {
+    display: flex;
+    gap: 8px;
+    width: min(100%, 430px)
+}
+
+.book-create-form input,
+.book-create-form textarea,
+.community-search input {
+    min-width: 0;
+    flex: 1;
+    padding: 0 12px;
+    border: 1px solid #e7e6ee;
+    border-radius: 7px;
+    background: #fff;
+    color: #333449;
+    font: 11px "Be Vietnam Pro", sans-serif
+}
+
+.book-create-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto
+}
+
+.book-create-form textarea {
+    grid-column: 1 / -1;
+    padding: 8px 12px;
+    resize: vertical
+}
+
+.book-create-form .button,
+.community-search .button {
+    flex-shrink: 0;
+    min-height: 36px;
+    font-size: 10px
+}
+
+.my-books-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 9px
+}
+
+.my-book-card {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #efedf4;
+    border-radius: 9px;
+    background: #fff
+}
+
+.my-book-icon,
+.community-book-mark {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    background: #f3f1fa;
+    color: #625ab1;
+    font: 17px "Yu Mincho", serif
+}
+
+.my-book-info {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    gap: 3px
+}
+
+.my-book-info strong {
+    overflow: hidden;
+    color: #3a3b4e;
+    font-size: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.my-book-info span,
+.book-list-empty {
+    color: #9293a1;
+    font-size: 9px
+}
+
+.book-visibility {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+    padding: 6px 8px;
+    border: 1px solid #e9e7f0;
+    border-radius: 20px;
+    background: #fff;
+    color: #777888;
+    cursor: pointer;
+    font: 500 9px "Be Vietnam Pro", sans-serif
+}
+
+.book-visibility.is-public {
+    border-color: #d7eadf;
+    background: #f2faf5;
+    color: #39805a
+}
+
+.book-visibility:disabled {
+    cursor: wait;
+    opacity: .6
+}
+
+.book-list-empty {
+    margin: 4px 0
+}
+
+.community-search {
+    display: flex;
+    gap: 9px;
+    width: min(100%, 640px);
+    min-height: 42px;
+    margin: 8px 0 20px;
+    padding: 4px;
+    border: 1px solid #e8e7ef;
+    border-radius: 9px;
+    background: #fff
+}
+
+.community-search input {
+    border: 0;
+    outline: none
+}
+
+.community-book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 14px
+}
+
+.community-book-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 200px;
+    padding: 18px;
+    border: 1px solid #ebe9f2;
+    border-radius: 12px;
+    background: linear-gradient(150deg, #fff, #fbfaff);
+    box-shadow: 0 6px 18px rgba(43, 42, 75, .035)
+}
+
+.community-book-mark {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 13px
+}
+
+.community-book-tag {
+    position: absolute;
+    top: 21px;
+    right: 15px;
+    color: #8982c7;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .08em
+}
+
+.community-book-card h2 {
+    margin: 0;
+    color: #333449;
+    font: 700 15px Manrope, "Be Vietnam Pro", sans-serif
+}
+
+.community-book-card > p {
+    flex: 1;
+    margin: 7px 0 14px;
+    color: #777888;
+    font-size: 10px;
+    line-height: 1.6
+}
+
+.community-book-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 12px;
+    color: #9293a1;
+    font-size: 9px
+}
+
+.community-book-card .button {
+    min-height: 32px;
+    font-size: 9px
+}
+
+.community-loading {
+    color: #8d8e9d;
+    font-size: 11px
+}
+
+.community-book-detail > .button {
+    margin-bottom: 18px
+}
+
+.community-detail-heading {
+    margin-bottom: 16px;
+    padding: 22px;
+    border: 1px solid #ebe9f2;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fff, #f8f6ff)
+}
+
+.community-detail-heading .eyebrow {
+    margin: 0 0 6px
+}
+
+.community-detail-heading h2 {
+    margin: 0;
+    color: #333449;
+    font: 700 23px Manrope, "Be Vietnam Pro", sans-serif
+}
+
+.community-detail-heading p {
+    color: #777888;
+    font-size: 11px
+}
+
+.community-detail-heading > span {
+    color: #8d8e9d;
+    font-size: 9px
+}
+
+.community-save-book {
+    display: block;
+    margin-top: 14px;
+    min-height: 34px;
+    font-size: 10px
+}
+
+.community-save-book:disabled {
+    cursor: wait;
+    opacity: .65
+}
+
+.community-entry-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 9px
+}
+
+.community-entry {
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #ecebf2;
+    border-radius: 9px;
+    background: #fff
+}
+
+.community-entry strong {
+    color: #39394f;
+    font: 600 14px "Yu Gothic", "Meiryo", sans-serif
+}
+
+.community-entry p {
+    margin: 7px 0;
+    color: #67697b;
+    font-size: 10px
+}
+
+.community-entry small {
+    color: #9999a7;
+    font-size: 9px
+}
+
+@media (max-width: 700px) {
+    .book-management-heading {
+        align-items: stretch;
+        flex-direction: column
+    }
+
+    .book-create-form {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr)
+    }
+
+    .book-create-form textarea {
+        grid-column: auto
+    }
+
+    .my-books-list {
+        grid-template-columns: 1fr
+    }
+
+    .community-search {
+        flex-direction: column;
+        padding: 8px
+    }
+
+    .community-search input {
+        min-height: 35px
+    }
+}
